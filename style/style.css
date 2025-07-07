@@ -18,7 +18,7 @@ html{
     text-align: center;
 }
 .titulo{
-    color:  #5bcb86 ;
+    color:  #91ffbb ;
     font-family: 'bold';
     font-size: 4vw;
 }
@@ -34,4 +34,46 @@ html{
     font-family: 'ligth';
     font-size: 1.2vw;
     word-spacing: 0.5vw;
+}
+.boton{
+    color:  #5bcb86 ;
+    background-color: black;
+    font-family: 'regular';
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    border: 0.2vw solid #5bcb86;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+}
+.seccion__piePagina--textos {
+    color:  #63b482 ;
+    font-family: 'regular';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    padding-right:30vw;
+    padding-left: 30vw;
+}
+.t1{
+    color:  #63b482 ;
+    font-family: 'regular';
+    font-size: 1vw;
+    word-spacing: 0.3vw;
+}
+.t2{
+    color:  #63b482 ;
+    font-family: 'regular';
+    font-size: 1vw;
+    word-spacing: 0.3vw;
+}
+.t3{
+    color:  #63b482 ;
+    font-family: 'regular';
+    font-size: 1vw;
+    word-spacing: 0.3vw;
+}
+.LogoSuperior{
+    width: 15vw;
 }
