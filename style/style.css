@@ -22,7 +22,19 @@ html{
     font-family: 'bold';
     font-size: 4vw;
     position: relative;
-    top: -10vw;
+    top: -8vw;
+    animation: desvanecido 2s linear infinite;
+}
+@keyframes desvanecido {
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
 }
 .seccion__textos--parteBaja h2{
     color:   #55ff96  ;
@@ -31,15 +43,17 @@ html{
     line-height: 0.5;
     word-spacing: 0.5vw;
     position: relative;
-    top: -9.8vw;
-}
+    top: -7.8vw;
+  }
+
+  
 .seccion__textos--nombre h3{
     color:  #91ffbb ;
     font-family: 'ligth';
     font-size: 1.2vw;
     word-spacing: 0.5vw;
     position: relative;
-    top: -8vw;
+    top: -6vw;
 }
 .boton{
     color:  #5bcb86 ;
@@ -54,7 +68,20 @@ html{
     border-bottom-left-radius: 0.5vw;
     border-bottom-right-radius: 0.5vw;
     position: relative;
-    top: -6vw;
+    top: -4vw;
+}
+.boton:hover{
+    color:  black ;
+    background-color: #5bcb86;
+    font-family: 'regular';
+    width: 15.2vw;
+    height: 3.2vw;
+    font-size: 1.2vw;
+    border: 0.2vw solid #5bcb86;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
 }
 .seccion__piePagina--textos {
     color:  #63b482 ;
@@ -64,30 +91,49 @@ html{
     padding-right:30vw;
     padding-left: 30vw;
     position: relative;
-    top: -3vw;
+    top: -2vw;
 }
 .t1{
     color:  #63b482 ;
     font-family: 'regular';
     font-size: 1vw;
     word-spacing: 0.3vw;
+    animation: bajada 1s linear infinite;
 }
 .t2{
     color:  #63b482 ;
     font-family: 'regular';
     font-size: 1vw;
     word-spacing: 0.3vw;
+    animation: bajada 1s linear infinite;
+    animation-delay: 0.5s;
 }
 .t3{
     color:  #63b482 ;
     font-family: 'regular';
     font-size: 1vw;
     word-spacing: 0.3vw;
+    animation: bajada 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes bajada {
+    0%{
+        position: relative;
+        top: 0.5vw;
+    }
+    50%{
+        position: relative;
+        top: 0vw;
+    }
+    100%{
+        position: relative;
+        top: 0.5vw;
+    }
 }
 .LogoSuperior{
     position: relative;
-    top: -8vw;
-    width: 15vw;
+    top: -6vw;
+    width: 13vw;
 }  
 .seccion-matrix {
     position: relative;
@@ -106,10 +152,10 @@ html{
   
   .lluvia span {
     position: absolute;
-    top: -10%;
+    top: 1vw;
     left: var(--x);
     font-family: monospace;
-    font-size: clamp(14px, 2vw, 22px);
+    font-size: 1.5vw;
     color: #00ff00;
     opacity: 0;
     animation: caer 2s linear infinite;
@@ -131,3 +177,207 @@ html{
       opacity: 0;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 1024px) {
+    .titulo {
+        font-size: 5vw;
+        top: -6vw;
+    }
+    
+    .seccion__textos--parteBaja h2 {
+        font-size: 2vw;
+        top: -5vw;
+    }
+    
+    .seccion__textos--nombre h3 {
+        font-size: 1.5vw;
+        top: -4vw;
+    }
+    
+    .boton {
+        width: 18vw;
+        height: 4vw;
+        font-size: 1.4vw;
+        top: -3vw;
+    }
+    
+    .boton:hover {
+        width: 18.2vw;
+        height: 4.2vw;
+        font-size: 1.4vw;
+    }
+    
+    .LogoSuperior {
+        width: 15vw;
+        top: -4vw;
+    }
+}
+
+/* Tablets en orientación vertical */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 6vw;
+        top: -4vw;
+    }
+    
+    .seccion__textos--parteBaja h2 {
+        font-size: 2.5vw;
+        top: -3vw;
+        line-height: 1.2;
+    }
+    
+    .seccion__textos--nombre h3 {
+        font-size: 2vw;
+        top: -2vw;
+    }
+    
+    .boton {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+        top: -1vw;
+    }
+    
+    .boton:hover {
+        width: 25.2vw;
+        height: 5.2vw;
+        font-size: 1.8vw;
+    }
+    
+    .seccion__piePagina--textos {
+        top: 1vw;
+        grid-template-columns: 1fr;
+        padding-left: 15vw;
+        padding-right: 15vw;
+        grid-template-rows: 3fr;
+    }
+    
+    .t1, .t2, .t3 {
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .LogoSuperior {
+        width: 20vw;
+        top: -2vw;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 8vw;
+        top: -2vw;
+    }
+    
+    .seccion__textos--parteBaja h2 {
+        font-size: 3.5vw;
+        top: -1vw;
+        line-height: 1.4;
+    }
+    
+    .seccion__textos--nombre h3 {
+        font-size: 2.8vw;
+        top: -0.5vw;
+    }
+    
+    .boton {
+        width: 35vw;
+        height: 8vw;
+        font-size: 2.5vw;
+        top: 0;
+        border-radius: 2vw;
+        border-width: 0.3vw;
+    }
+    
+    .boton:hover {
+        width: 35.2vw;
+        height: 8.2vw;
+        font-size: 2.5vw;
+    }
+    
+    .seccion__piePagina--textos {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    
+    .t1, .t2, .t3 {
+        font-size: 2.5vw;
+        animation: desvanecido 2s linear infinite;
+    }
+    
+    .LogoSuperior {
+        width: 25vw;
+        top: 0;
+    }
+    
+    .seccion-matrix {
+        height: 150px;
+    }
+    
+    .lluvia span {
+        font-size: clamp(10px, 3vw, 18px);
+    }
+    
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 10vw;
+    }
+    
+    .seccion__textos--parteBaja h2 {
+        font-size: 4vw;
+    }
+    
+    .seccion__textos--nombre h3 {
+        font-size: 3.5vw;
+    }
+    
+    .boton {
+        width: 45vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+    
+    .boton:hover {
+        width: 45.2vw;
+        height: 10.2vw;
+        font-size: 3vw;
+    }
+    
+    .seccion__piePagina--textos {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+    .t1, .t2, .t3 {
+        font-size: 3vw;
+        animation: desvanecido 2s linear infinite;
+    }
+    
+    .LogoSuperior {
+        width: 30vw;
+    }
+    
+    .seccion-matrix {
+        height: 120px;
+    }
+    
+}
+
+
