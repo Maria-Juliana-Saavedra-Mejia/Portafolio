@@ -1,4 +1,31 @@
+@font-face {
+    font-family: 'bold';
+    src: url(../font/UniversNextProBold.ttf);
+}
+@font-face {
+    font-family: 'regular';
+    src: url(../font/UniversNextProRegular.ttf);
+}
+@font-face {
+    font-family: 'ligth';
+    src: url(../font/Univers\ Next\ Pro\ Light.ttf);
+}
+html{
+    background-color: black;
+}
 .seccion{
     align-items: center;
     text-align: center;
+}
+.titulo{
+    color:  #5bcb86 ;
+    font-family: 'bold';
+    font-size: 4vw;
+}
+.seccion__textos--parteBaja h2{
+    color:   #55ff96  ;
+    font-family: 'regular';
+    font-size: 1.5vw;
+    line-height: 0.5;
+    word-spacing: 0.5vw;
 }
