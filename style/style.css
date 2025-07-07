@@ -29,3 +29,9 @@ html{
     line-height: 0.5;
     word-spacing: 0.5vw;
 }
+.seccion__textos--nombre h3{
+    color:  #91ffbb ;
+    font-family: 'ligth';
+    font-size: 1.2vw;
+    word-spacing: 0.5vw;
+}
