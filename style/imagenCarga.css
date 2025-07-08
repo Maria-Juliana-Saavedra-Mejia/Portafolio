@@ -100,27 +100,27 @@ body{
 }
 .text1{
     animation: aparecer 0.5s linear 1;
-    animation-delay: 1s;
+    animation-delay: 0.6s;
 }
 .text2{
     animation: aparecer 0.5s linear 1; 
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 .text3{
     animation: aparecer 0.5s linear 1; 
-    animation-delay: 3s;
+    animation-delay: 1.5s;
 }
 .text4{
     animation: aparecer 0.5s linear 1;  
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 .text5{
     animation: aparecer 0.5s linear 1; 
-    animation-delay: 5s;
+    animation-delay: 2.5s;
 }
 .text6{
     animation: aparecer 0.5s linear 1;  
-    animation-delay: 6s;
+    animation-delay: 3s;
 }
 
 
