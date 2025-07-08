@@ -24,7 +24,7 @@ body{
     position: relative;
     top: 5vw;
     width: 8vw;
-    animation: giro 2s linear infinite;
+    animation: giro 2s linear ;
 }
 .seccion__text--1{
     position: relative;
@@ -37,6 +37,7 @@ body{
     top: 4vw;
     color:  #91ffbb ;
     font-family: "regular";
+    animation: aparecer 0.5s linear 1;
 }
 .seccion__cuadro{
     position: relative;
@@ -95,9 +96,32 @@ body{
     row-gap: 3vw;
     color: #52e88b; 
     font-family: "regular";
-    font-size: 1.5vw;
+    font-size: 1.5vw;;
 }
-
+.text1{
+    animation: aparecer 0.5s linear 1;
+    animation-delay: 1s;
+}
+.text2{
+    animation: aparecer 0.5s linear 1; 
+    animation-delay: 2s;
+}
+.text3{
+    animation: aparecer 0.5s linear 1; 
+    animation-delay: 3s;
+}
+.text4{
+    animation: aparecer 0.5s linear 1;  
+    animation-delay: 4s;
+}
+.text5{
+    animation: aparecer 0.5s linear 1; 
+    animation-delay: 5s;
+}
+.text6{
+    animation: aparecer 0.5s linear 1;  
+    animation-delay: 6s;
+}
 
 
 
@@ -122,6 +146,15 @@ body{
     transform: rotate(360deg);
   }
 }
+@keyframes aparecer{
+    0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+}
 .cargando{ 
     position: relative; 
     color: #FFF;
@@ -132,3 +165,309 @@ body{
     font-family: "regular";
     margin-left: 4vw;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Tablets y pantallas medianas (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .seccion__img--boton {
+        top: 8vw;
+        width: 12vw;
+    }
+    
+    .seccion__text--1 {
+        top: 6vw;
+        font-size: 4vw;
+    }
+    
+    .seccion__text--2 {
+        top: 6vw;
+        font-size: 2.5vw;
+    }
+    
+    .seccion__cuadro {
+        top: 8vw;
+        left: 15vw;
+        width: 70vw;
+        height: 35vw;
+    }
+    
+    .seccion__cuadros--Circulos {
+        width: 18vw;
+        height: 8vw;
+        margin-left: 4vw;
+    }
+    
+    .seccion__cuadro--rojo,
+    .seccion__cuadro--amarillo,
+    .seccion__cuadro--verde {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    
+    .seccion__cuadro--texto {
+        font-size: 2vw;
+        margin-left: 2vw;
+    }
+    
+    .seccion__cuadro--textos {
+        font-size: 2.2vw;
+        margin: 2vw;
+        row-gap: 4vw;
+    }
+    
+    .rueda {
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-left: 35vw;
+        margin-top: 12vw;
+    }
+    
+    .cargando {
+        font-size: 2vw;
+        margin-left: 2vw;
+        margin-top: -2.5vw;
+    }
+}
+
+/* Móviles grandes (480px - 768px) */
+@media screen and (max-width: 768px) {
+    .seccion__img--boton {
+        top: 10vw;
+        width: 15vw;
+    }
+    
+    .seccion__text--1 {
+        top: 8vw;
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .seccion__text--2 {
+        top: 8vw;
+        font-size: 3.5vw;
+        text-align: center;
+    }
+    
+    .seccion__cuadro {
+        top: 12vw;
+        left: 5vw;
+        width: 90vw;
+        height: 50vw;
+    }
+    
+    .seccion__cuadros--Circulos {
+        width: 25vw;
+        height: 10vw;
+        margin-left: 5vw;
+    }
+    
+    .seccion__cuadro--rojo,
+    .seccion__cuadro--amarillo,
+    .seccion__cuadro--verde {
+        width: 2vw;
+        height: 2vw;
+    }
+    
+    .seccion__cuadro--texto {
+        font-size: 2.5vw;
+        margin-left: 2vw;
+    }
+    
+    .seccion__cuadro--textos {
+        font-size: 2.8vw;
+        margin: 2vw;
+        row-gap: 5vw;
+    }
+    
+    .rueda {
+        width: 4vw;
+        height: 4vw;
+        margin-left: 43vw;
+        margin-top: 15vw;
+    }
+    
+    .cargando {
+        font-size: 2.5vw;
+        margin-left: 0vw;
+        margin-top: -3vw;
+        text-align: center;
+    }
+}
+
+/* Móviles pequeños (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .seccion__img--boton {
+        top: 15vw;
+        width: 20vw;
+    }
+    
+    .seccion__text--1 {
+        top: 12vw;
+        font-size: 6vw;
+        text-align: center;
+    }
+    
+    .seccion__text--2 {
+        top: 12vw;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .seccion__cuadro {
+        top: 18vw;
+        left: 2vw;
+        width: 90vw;
+        height: 60vw;
+    }
+    
+    .seccion__cuadros--Circulos {
+        width: 30vw;
+        height: 12vw;
+        margin-left: 5vw;
+    }
+    
+    .seccion__cuadro--rojo,
+    .seccion__cuadro--amarillo,
+    .seccion__cuadro--verde {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+    
+    .seccion__cuadro--texto {
+        font-size: 3vw;
+        margin-left: 2vw;
+    }
+    
+    .seccion__cuadro--textos {
+        font-size: 3.2vw;
+        margin: 2vw;
+        row-gap: 6vw;
+    }
+    
+    .rueda {
+        width: 5vw;
+        height: 5vw;
+        margin-left: 10vw;
+        margin-top: 23vw;
+    }
+    
+    .cargando {
+        margin-left: 0vw;
+        margin-top: -4vw;
+        text-align: center;
+    }
+}
+
+/* Pantallas extra pequeñas (menos de 320px) */
+@media screen and (max-width: 320px) {
+    .seccion__img--boton {
+        top: 20vw;
+        width: 25vw;
+    }
+    
+    .seccion__text--1 {
+        top: 15vw;
+        font-size: 7vw;
+        text-align: center;
+    }
+    
+    .seccion__text--2 {
+        top: 15vw;
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    
+    .seccion__cuadro {
+        top: 25vw;
+        left: 1vw;
+        width: 98vw;
+        height: 70vw;
+    }
+    
+    .seccion__cuadros--Circulos {
+        width: 35vw;
+        height: 15vw;
+        margin-left: 5vw;
+    }
+    
+    .seccion__cuadro--rojo,
+    .seccion__cuadro--amarillo,
+    .seccion__cuadro--verde {
+        width: 3vw;
+        height: 3vw;
+    }
+    
+    .seccion__cuadro--texto {
+        font-size: 3.5vw;
+        margin-left: 2vw;
+    }
+    
+    .seccion__cuadro--textos {
+        font-size: 3.8vw;
+        margin: 2vw;
+        row-gap: 7vw;
+    }
+    
+    .rueda {
+        width: 6vw;
+        height: 6vw;
+        margin-left: 47vw;
+        margin-top: 25vw;
+    }
+    
+    .cargando {
+        font-size: 3.5vw;
+        margin-left: 0vw;
+        margin-top: -5vw;
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales para el contador que ya tienes */
+.tiempo-restante {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tiempo-texto {
+    text-align: center;
+    font-family: "regular";
+    font-size: 1.2vw;
+}
+
+/* Media queries para el contador también */
+@media screen and (max-width: 1024px) {
+    .tiempo-texto {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tiempo-texto {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tiempo-texto {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .tiempo-texto {
+        font-size: 3.5vw;
+    }
+}
