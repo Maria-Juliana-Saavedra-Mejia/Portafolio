@@ -69,6 +69,7 @@ html{
     border-bottom-right-radius: 0.5vw;
     position: relative;
     top: -4vw;
+    box-shadow: 0 0 10px 1px #52e88b;
 }
 .boton:hover{
     color:  black ;

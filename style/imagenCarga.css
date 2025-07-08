@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'bold';
+    src: url(../font/UniversNextProBold.ttf);
+}
+@font-face {
+    font-family: 'regular';
+    src: url(../font/MonoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'ligth';
+    src: url(../font/Univers\ Next\ Pro\ Light.ttf);
+}
+body{
+    background-color: black;
+    font-weight: 900;
+}
+.seccion{
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.seccion__img--boton{
+    position: relative;
+    top: 5vw;
+    width: 8vw;
+    animation: giro 2s linear infinite;
+}
+.seccion__text--1{
+    position: relative;
+    top: 4vw;
+    color:  #52e88b;
+    font-family: "bold";
+}
+.seccion__text--2{
+    position: relative;
+    top: 4vw;
+    color:  #91ffbb ;
+    font-family: "regular";
+}
+.seccion__cuadro{
+    position: relative;
+    top: 6vw;
+    left: 27vw;
+    border: 0.1vw solid  #52e88b;
+    height: 20vw;
+    width: 45vw;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    box-shadow: 0 0 10px 1px #52e88b;
+}
+.seccion__cuadros--Circulos{
+    border: 0.5 solid red;
+    display: grid;
+    width: 11.5vw;
+    height: 5vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    margin-left: 3vw;
+
+}
+.seccion__cuadro--rojo{
+    position: relative;
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100%;
+    background-color: red;
+}
+.seccion__cuadro--amarillo{
+    position: relative;
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100%;
+    background-color: rgb(255, 213, 0);
+}
+.seccion__cuadro--verde{
+    position: relative;
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100%;
+    background-color: #52e88b;
+}
+.seccion__cuadro--texto{
+    font-size: 1.2vw;
+    color:  #91ffbb ;
+    font-family: "regular";
+    margin-left: 1vw;
+}
+.seccion__cuadro--textos{
+    margin: 1vw;
+    text-align: left;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 3vw;
+    color: #52e88b; 
+    font-family: "regular";
+    font-size: 1.5vw;
+}
+
+
+
+
+
+.rueda {
+  border: 0.2vw solid  #52e88b; 
+  border-radius: 50%;
+  border-left-color: transparent;
+  width: 1.5vw;
+  height: 1.5vw;
+  animation: giro 1s linear infinite;
+  margin-top: 10vw;
+  margin-left: 38vw;
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cargando{ 
+    position: relative; 
+    color: #FFF;
+    margin-top: -1.5vw;
+    letter-spacing: 0.08em;
+    font-size: 1.2vw;
+    color:   #63b482  ;
+    font-family: "regular";
+    margin-left: 4vw;
+  }

@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/imagenCarga.css">
     <link rel="icon" type="image/x-icon" href="../img/botonencender.png">
 </head>
 <body>
-    
+    <div class="seccion">
+        <div  class="seccion__img">
+            <img src="../img/botonencender.png" class="seccion__img--boton">
+        </div>
+        <div class="seccion__text">
+            <h1 class="seccion__text--1">PORTAFOLIO SYSTEM v2.1.0</h1>
+            <h2 class="seccion__text--2">Inicializando Interfaz neural...</h2>
+        </div>
+        <div class="seccion__cuadro">
+            <div class="seccion__cuadros--Circulos">
+                <div class="seccion__cuadro--rojo"></div>
+                <div class="seccion__cuadro--amarillo"></div>
+                <div class="seccion__cuadro--verde"></div>
+                <div class="seccion__cuadro--texto">system.boot</div>
+            </div>
+            <div class="seccion__cuadro--textos">
+                <div>LOADING PORTAFOLIO MODULES ...</div>
+                <div>ESTABLISHING QUANTUM CONECTIONS ...</div>
+                <div>VERIFYING DIGITAL IDENTITY ...</div>
+                <div>ACTIVATING HOLOGRAFIC INTERFACE ...</div>
+                <div>SYSTEM READY - WELCOME TO THE MATRIX ...</div>
+                <div>undefined</div>
+            </div>
+        </div>
+        <div class="contenedor-loader">
+            <div class="rueda"></div>
+            <div class="cargando">Cargando módulos del sistema ...</div>
+        </div>
+        <div class="tiempo-restante">
+            <div class="tiempo-texto"> <span id="contador" style="color:black"></span> </div>
+        </div>
+    </div>
 </body>
+<script>
+    // Contador de 10 segundos
+    let tiempoRestante = 10;
+    const contadorElemento = document.getElementById('contador');
+    
+    // Actualizar contador cada segundo
+    const intervalo = setInterval(() => {
+        tiempoRestante--;
+        contadorElemento.textContent = tiempoRestante;
+        
+        if (tiempoRestante <= 0) {
+            clearInterval(intervalo);
+            // Redirigir al portafolio
+            window.location.href = './portafolio.html';
+        }
+    }, 1000);
+
+    // También permitir saltar manualmente haciendo clic
+    document.addEventListener('click', () => {
+        clearInterval(intervalo);
+        window.location.href = './portafolio.html';
+    });
+</script>
 </html>
