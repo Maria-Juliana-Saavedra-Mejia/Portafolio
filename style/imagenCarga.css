@@ -134,7 +134,7 @@ body{
   height: 1.5vw;
   animation: giro 1s linear infinite;
   margin-top: 10vw;
-  margin-left: 38vw;
+  margin-left: 35vw;
 }
 
 @keyframes giro {
