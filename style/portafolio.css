@@ -1,4 +1,71 @@
+@font-face {
+    font-family: 'bold';
+    src: url(../font/UniversNextProBold.ttf);
+}
+@font-face {
+    font-family: 'regular';
+    src: url(../font/MonoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'ligth';
+    src: url(../font/Univers\ Next\ Pro\ Light.ttf);
+}
 body{
     background-color:black;
     color: white;
+}
+.header{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: left;
+    align-items: center;
+    border-bottom: 0.1vw solid #52e88b;
+    box-shadow: 0 0 10px 1px #52e88b;
+    height: 8vw;
+    color: white;
+    font-family: 'bold';
+    font-size: 1.3vw;
+    padding: 0.5vw;
+}
+.header div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}
+.logo{
+    width: 8vw;
+}
+.img1{
+    width: 4vw;
+    margin-left: 4.5vw;
+}
+.img2{
+    width: 4vw;
+    margin-left: 2vw;
+}
+.img3{
+    width: 4vw;
+    margin-left: 1vw;
+}
+.img4{
+    width: 4vw;
+    margin-left: 3vw;
+}
+.img5{
+    width: 2vw; 
+    margin-left: 2vw;
+    margin-top: 1vw;
+}
+
+.habilidades{
+    margin-left: -3vw;
+}
+.certificaciones{
+    margin-left: -4vw; 
+}
+.Proyectos{
+    margin-left: -1.5vw; 
+}
+.Contacto{
+    margin-left: -3.5vw; 
 }
