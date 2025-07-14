@@ -10,6 +10,10 @@
     font-family: 'ligth';
     src: url(../font/Univers\ Next\ Pro\ Light.ttf);
 }
+@font-face {
+    font-family: 'boldextra';
+    src: url(../font/UniversNextProBold.ttf);
+}
 a{
     text-decoration: none;
     text-decoration-line: none;
@@ -75,4 +79,48 @@ body{
 .Contacto{
     margin-left: -3.5vw; 
 }
-
+.hellow{
+    font-family: 'boldextra';
+    font-weight: 900;
+    font-size: 4vw;
+    color: white;
+    margin-left: 20vw;
+    margin-top: 10vw;
+}
+.name{
+    font-family: 'boldextra';
+    font-weight: 900;
+    color: #5ad98b;
+    font-size: 2.15vw;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 20vw;
+    margin-top: -2vw;
+}
+.desarrolladora{
+    font-family: 'ligth';
+    font-size:1.5vw;
+    color: white;
+    margin-left: 20vw;
+}
+.frase{
+    font-family: 'ligth';
+    font-size: 1.5vw;
+    width: 30vw;
+    margin-left: 20vw;
+}
+.fotomia{
+    margin-left: 65vw;
+    margin-top: -22vw;
+    width: 25vw;
+    border-bottom: 0.1vw solid #52e88b;
+    box-shadow: 0 0 10px 1px #52e88b;
+    border-radius: 100%;
+}
+.botton1{
+    margin-left: 20vw;
+    margin-top: -3vw;
+}
+.botton2{
+    margin-left: 10vw;
+    margin-top: -2vw;  
+}
