@@ -48,7 +48,6 @@
             </div>
         </div>
         <div class="secciones__perfil">
-            <div><img class="foto" src="../img/logoJuli.png"></div>
             <div id="secciones__perfil--titulo"><h1>Sobre Mí</h1></div>
             <div class="secciones__perfil--textoPerfil"><p>Soy Desarrolladora de Software Full Stack 
                 con enfoque en la creación de aplicaciones web funcionales, 
@@ -57,33 +56,56 @@
                  compromiso con la calidad del código.
                  <br>
                  <br>
-                 Destaco por mi liderazgo, persistencia, trabajo en
-                  equipo y gestión efectiva del tiempo, aplicando buenas 
-                  prácticas de programación, diseño responsivo y estándares que 
-                  garantizan soluciones escalables y de alto valor.</p>
+                  Destaco por mi liderazgo, persistencia y 
+                  habilidad para trabajar en equipo, promoviendo entornos
+                   colaborativos. Además, cuento con una buena gestión del tiempo, 
+                   lo cual me permite organizar tareas de forma eficiente y cumplir 
+                   con los objetivos establecidos sin comprometer la calidad.
+                   <br>
+                   <br>
+                  Aplico buenas prácticas de programación, diseño interfaces 
+                  responsivas y me guío por estándares profesionales que garantizan 
+                  la construcción de soluciones tecnológicas sostenibles, escalables 
+                  y de alto valor para los usuarios y las organizaciones.</p>
             </div>
-            <div class="secciones__perfil--textoObjetivo">
-                <h3>Objetivos</h3>
-                <li>Consolidar mi experiencia en el desarrollo de aplicaciones 
-                    Full Stack, profundizando en frameworks modernos y metodologías
-                     ágiles.</li>
-                <li>Participar en proyectos innovadores que generen un impacto 
-                    positivo en la vida de los usuarios y las empresas.</li>
-                <li>Continuar fortaleciendo mis habilidades en liderazgo técnico y trabajo 
-                    colaborativo, contribuyendo al éxito de los equipos de desarrollo.</li>
+            <div class="perfil-container">
+                <div class="secciones__perfil--Botones">
+                    <button class="botones" data-modal="objetivos">Objetivos</button>
+                    <button class="botones" data-modal="mision">Misión</button>
+                    <button class="botones" data-modal="vision">Visión</button>
+                </div>
+        
+            <!-- Modal Objetivos -->
+            <div id="modal-objetivos" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Objetivos</h3>
+                    <ul>
+                        <li>Consolidar mi experiencia en el desarrollo de aplicaciones Full Stack, profundizando en frameworks modernos y metodologías ágiles.</li>
+                        <li>Participar en proyectos innovadores que generen un impacto positivo en la vida de los usuarios y las empresas.</li>
+                        <li>Continuar fortaleciendo mis habilidades en liderazgo técnico y trabajo colaborativo, contribuyendo al éxito de los equipos de desarrollo.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="secciones__perfil--textoMision">
-                <h3>Misión</h3>
-                <p>Desarrollar soluciones digitales de calidad que respondan de 
-                    manera efectiva a las necesidades actuales, aplicando principios 
-                    de programación limpia, diseño responsivo y mejora continua.</p>
+        
+            <!-- Modal Misión -->
+            <div id="modal-mision" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Misión</h3>
+                    <p>Desarrollar soluciones digitales de calidad que respondan de manera efectiva a las necesidades actuales, aplicando principios de programación limpia, diseño responsivo y mejora continua.</p>
+                </div>
             </div>
-            <div class="secciones__perfil--textoVision">
-                <h3>visión</h3>
-                <p>Convertirme en una profesional reconocida por la creación de aplicaciones 
-                    innovadoras yeficientes, aportando al crecimiento tecnológico y 
-                    contribuyendo con proyectos que impacten positivamente en la sociedad.</p>
+        
+            <!-- Modal Visión -->
+            <div id="modal-vision" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Visión</h3>
+                    <p>Convertirme en una profesional reconocida por la creación de aplicaciones innovadoras y eficientes, aportando al crecimiento tecnológico y contribuyendo con proyectos que impacten positivamente en la sociedad.</p>
+                </div>
             </div>
+            <img class="foto" src="../img/logoJuli.png">
         </div>
         <div class="secciones__Habilidades">
             <h1>Habilidades</h1>
@@ -99,4 +121,167 @@
         </div>
     </div>
 </body>
+<script>
+    // Crear estilos CSS dinámicamente
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Estilos del Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: #1a1a1a;
+            margin: 10% auto;
+            padding: 30px;
+            border: 0.1vw solid #52e88b;
+            box-shadow: 0 0 20px 2px #52e88b;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            color: white;
+            font-family: 'ligth';
+        }
+
+        .close {
+            color: #52e88b;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #5ad98b;
+        }
+
+        .modal h3 {
+            color: #52e88b;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            font-family: 'bold';
+        }
+
+        .modal p {
+            line-height: 1.6;
+            color: white;
+            font-size: 16px;
+            text-align: justify;
+            font-family: 'ligth';
+        }
+
+        .modal ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(82, 232, 139, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #52e88b;
+            line-height: 1.5;
+            color: white;
+            font-family: 'ligth';
+        }
+
+        .modal li:before {
+            content: "✓";
+            color: #52e88b;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 15% auto;
+                padding: 20px;
+                width: 95%;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Esperar a que el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener todos los botones y modales
+        const botones = document.querySelectorAll('.botones');
+        const modales = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close');
+
+        // Función para abrir modal
+        function abrirModal(modalId) {
+            const modal = document.getElementById(`modal-${modalId}`);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Función para cerrar modal
+        function cerrarModal(modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners para los botones
+        botones.forEach(boton => {
+            boton.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                abrirModal(modalId);
+            });
+        });
+
+        // Event listeners para los botones de cerrar
+        closeButtons.forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                cerrarModal(modal);
+            });
+        });
+
+        // Cerrar modal al hacer click fuera de él
+        modales.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    cerrarModal(this);
+                }
+            });
+        });
+
+        // Cerrar modal con la tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modales.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        cerrarModal(modal);
+                    }
+                });
+            }
+        });
+    });
+</script>
 </html>

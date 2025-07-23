@@ -152,3 +152,49 @@ body{
     border: 0.1vw solid #52e88b;
     box-shadow: 0 0 10px 1px #52e88b;
 }
+#secciones__perfil--titulo{
+    font-family: 'boldextra';
+    font-weight: 900;
+    font-size: 2vw;
+    color: white;
+    margin-left: 38vw;
+}
+.secciones__perfil--textoPerfil{
+    width: 48vw;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'ligth';
+    margin-left: 48vw;
+}
+.secciones__perfil--Botones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 40vw;
+    margin-left: 53vw;
+}
+.botones{
+    top: 2vw;
+    position: relative;
+    width: 10vw;
+    height: 2.5vw;
+    font-family: 'ligth';
+    font-size: 1.3vw;
+    color: #52e88b;
+    font-weight: 900;
+    background-color: black;
+    border-color: #52e88b;
+    box-shadow: 0 0 10px 1px #52e88b;
+    margin: 0.5vw;
+}
+.foto{
+    border: 0.2vw solid #52e88b;
+    width: 35vw;
+    height: 35vw;
+    margin-left: 5vw;
+    margin-top: -34vw;
+}
+.secciones__Habilidades{
+    margin-top: 11vw;
+    width: 100%;
+    height: 50vw;
+}
