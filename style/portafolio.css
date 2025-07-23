@@ -193,8 +193,127 @@ body{
     margin-left: 5vw;
     margin-top: -34vw;
 }
+#secciones__Habilidades--titulo{
+    font-family: 'boldextra';
+    font-weight: 900;
+    font-size: 3vw;
+    color: white;
+    margin-left: 40vw;
+    grid-auto-columns: 1,3;
+    margin-top: 10vw;
+}
+
 .secciones__Habilidades{
-    margin-top: 11vw;
+    margin-top: 5vw;
     width: 100%;
     height: 50vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tecnologias-container {
+    max-width: 1200px;
+    margin: 5vw;
+}
+
+.tecnologias-titulo {
+    text-align: center;
+    font-family: 'bold';
+    font-size: 3vw;
+    color: #52e88b;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #52e88b;
+}
+
+.tecnologias-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.tech-card {
+    background: linear-gradient(135deg, black 0%, #2d2d2d 100%);
+    border: 2px solid #52e88b;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 1vw;
+    height: 20vw;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #52e88b, transparent, #52e88b);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(82, 232, 139, 0.3);
+}
+
+.tech-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(82, 232, 139, 0.1);
+    border-radius: 50%;
+    font-size: 40px;
+    color: #52e88b;
+    border: 2px solid #52e88b;
+}
+
+.tech-name {
+    font-family: 'bold';
+    font-size: 1.7vw;
+    color: #52e88b;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.tech-description {
+    font-family: 'ligth';
+    color: white;
+    font-size: 1.5vw;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    background: rgba(82, 232, 139, 0.2);
+    color: #52e88b;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 1px solid #52e88b;
 }
