@@ -158,6 +158,8 @@ body{
     font-size: 2vw;
     color: white;
     margin-left: 38vw;
+    text-shadow: 0 0 10px #52e88b, 0 0 20px #52e88b, 0 0 30px #52e88b;
+    animation: glow-pulse 2s ease-in-out infinite alternate;
 }
 .secciones__perfil--textoPerfil{
     width: 48vw;
@@ -197,19 +199,15 @@ body{
     font-family: 'boldextra';
     font-weight: 900;
     font-size: 3vw;
-    color: white;
-    margin-left: 40vw;
+    margin-left: 34vw;
     grid-auto-columns: 1,3;
-    margin-top: 10vw;
-}
-.secciones__Habilidades--tecnicas{
-    font-family: 'ligth';
-    font-weight: 900;
-    font-size: 3vw;
+    margin-top: 8vw;
     color: #52e88b;
-    margin-left: 5vw;
+    text-shadow: 0 0 10px #52e88b, 0 0 20px #52e88b, 0 0 30px #52e88b;
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+    color: white;
 }
-.secciones__Habilidades-Blandas{
+.secciones__Habilidades-Tecnicas{
     margin-top: 5vw;
     width: 100%;
     display: grid;
@@ -312,6 +310,7 @@ body{
     gap: 8px;
     justify-content: center;
     margin-top: 20px;
+    height: 20vw;
 }
 
 .tech-tag {
@@ -322,3 +321,18 @@ body{
     font-size: 12px;
     border: 1px solid #52e88b;
 }
+.secciones__Habilidades-Blandas {
+    margin-top: 5vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@keyframes glow-pulse {
+    from {
+      text-shadow: 0 0 10px #52e88b, 0 0 20px #52e88b, 0 0 30px #52e88b;
+    }
+    to {
+      text-shadow: 0 0 15px #52e88b, 0 0 25px #52e88b, 0 0 35px #52e88b, 0 0 45px #52e88b;
+    }
+  }
