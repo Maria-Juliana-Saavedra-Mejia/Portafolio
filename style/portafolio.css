@@ -509,7 +509,7 @@ body{
 
   .certificaciones-modernas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-template-columns: 1fr 1fr 1fr ;
     gap: 2vw;
     padding: 2vw 5vw;
     margin-top: 4vw;
