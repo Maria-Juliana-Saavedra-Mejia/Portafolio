@@ -371,17 +371,6 @@ body{
     animation: glow-pulse 2s ease-in-out infinite alternate;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .contacto-container {
     display: grid;
     gap: 3vw;
@@ -494,19 +483,6 @@ body{
     transform: scale(1.2);
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   .certificaciones-modernas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -567,35 +543,9 @@ body{
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .proyectos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2vw;
     padding: 2vw 5vw;
   }
@@ -662,3 +612,25 @@ body{
   .proyecto-boton:hover {
     background-color: #3ccc70;
   }
+
+
+  button:hover, .botton1:hover, .botton2:hover, .botones:hover {
+    background-color: #3ccc70;
+    color: black;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(82, 232, 139, 0.6);
+    cursor: pointer;
+}
+
+/* Hover para imágenes principales */
+.fotomia:hover {
+    transform: scale(1.03);
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 20px rgba(82, 232, 139, 0.4);
+}
+
+
+
+
+
