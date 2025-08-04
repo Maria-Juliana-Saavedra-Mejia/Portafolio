@@ -158,3 +158,12 @@
          }
      });
  });
+
+
+
+document.getElementById("formContacto").addEventListener("submit", function(event) {
+  event.preventDefault();
+  // Aquí podrías integrar EmailJS o un backend. Por ahora, solo confirmación.
+  document.getElementById("mensajeConfirmacion").style.display = "block";
+  this.reset();
+});
