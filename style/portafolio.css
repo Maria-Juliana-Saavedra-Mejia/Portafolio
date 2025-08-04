@@ -494,6 +494,105 @@ body{
     transform: scale(1.2);
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .certificaciones-modernas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    gap: 2vw;
+    padding: 2vw 5vw;
+    margin-top: 4vw;
+  }
+  
+  .cert-modern-card {
+    background: linear-gradient(135deg, #111 0%, #1f1f1f 100%);
+    border: 1px solid #52e88b;
+    box-shadow: 0 0 15px rgba(82, 232, 139, 0.15);
+    border-radius: 1vw;
+    padding: 2vw 1.5vw;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .cert-modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(82, 232, 139, 0.25);
+  }
+  
+  .cert-icono img {
+    width: 3.5vw;
+    margin-bottom: 1vw;
+    animation: float 2s ease-in-out infinite alternate;
+  }
+  
+  .cert-titulo {
+    font-family: 'boldextra';
+    color: #52e88b;
+    font-size: 1.3vw;
+    margin-bottom: 0.5vw;
+  }
+  
+  .cert-institucion {
+    color: #ccc;
+    font-size: 1.1vw;
+    font-family: 'ligth';
+  }
+  
+  .cert-anio {
+    display: block;
+    font-size: 1vw;
+    color: #999;
+    margin-top: 0.8vw;
+    font-family: 'ligth';
+  }
+  
+  @keyframes float {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .proyectos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
