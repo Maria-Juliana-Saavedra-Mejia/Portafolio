@@ -710,626 +710,660 @@ body{
 
 
 
-
-
 /* ========================================
-   MEDIA QUERIES - AGREGAR AL FINAL DEL CSS EXISTENTE
+   MEDIA QUERIES MEJORADOS - AGREGAR AL FINAL DEL CSS EXISTENTE
    ======================================== */
 
-/* Tablets grandes - 1024px y menor */
-@media (max-width: 1024px) {
+/* Primero agregamos algunas mejoras generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Tablets grandes - 1200px y menor */
+@media (max-width: 1200px) {
     .header {
-        grid-template-columns: 1fr 1fr ;
-        font-size: 1.1vw;
-        height: 10vw;
-    }
-    
-    .logo {
-        width: 6vw;
-    }
-    
-    .img1, .img2, .img3, .img4 {
-        width: 3vw;
-        margin-left: 3vw;
-    }
-    
-    .img5 {
-        width: 2vw;
-        margin-left: 3vw;
-    }
-    
-    .hellow {
-        font-size: 3.5vw;
-        margin-left: 15vw;
-        margin-top: 10vw;
-    }
-    
-    .name {
-        font-size: 2vw;
-        margin-left: 15vw;
-    }
-    
-    .desarrolladora {
-        margin-left: 20vw;
-    }
-    
-    .frase {
-        margin-left: 15vw;
-        width: 35vw;
-    }
-    
-    .fotomia {
-        margin-left: 60vw;
-        width: 25vw;
-        margin-top: -18vw;
-    }
-    
-    .botton1 {
-        margin-left: 18vw;
+        padding: 1vw;
+        height: 9vw;
+        opacity: 0;
     }
     
     .secciones__Habilidades-Tecnicas,
     .secciones__Habilidades-Blandas {
         grid-template-columns: 1fr 1fr;
+        gap: 3vw;
+    }
+    
+    .tech-card {
+        height: 25vw;
     }
     
     .certificaciones-modernas {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
     .proyectos-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 3vw;
     }
 }
 
 /* Tablets - 768px y menor */
 @media (max-width: 768px) {
+    /* Header simplificado pero elegante */
     .header {
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         height: auto;
-        padding: 2vw;
-        text-align: center;
+        padding: 2rem 1rem;
+        position: relative;
     }
     
-    .header div {
-        grid-template-columns: 1fr;
-        margin: 1vw 0;
-        justify-content: center;
-        align-items: center;
+    .header > div:first-child {
+        flex: 0 0 auto;
+    }
+    
+    .header > div:not(:first-child) {
+        display: none;
+    }
+    
+    /* Agregar indicador de menú móvil */
+    .header::after {
+        content: "☰";
+        font-size: 2rem;
+        color: #52e88b;
+        cursor: pointer;
     }
     
     .logo {
-        width: 15vw;
-        margin: 0 auto;
+        width: 60px;
+        height: auto;
     }
     
-    .img1, .img2, .img3, .img4, .img5 {
-        width: 6vw;
-        margin: 0 auto 1vw auto;
-    }
-    
-    .perfil, .habilidades, .certificaciones, .Proyectos, .Contacto {
-        margin: 0;
-        font-size: 3vw;
+    /* Sección inicial mejorada */
+    .secciones__parteInicial {
+        padding: 3rem 1rem;
+        text-align: center;
     }
     
     .hellow {
-        font-size: 6vw;
-        margin-left: 0;
-        margin-top: 5vw;
-        text-align: center;
+        font-size: 2.5rem;
+        margin: 0 0 1rem 0;
     }
     
     .name {
-        font-size: 4vw;
-        margin-left: 0;
-        text-align: center;
+        font-size: 1.8rem;
+        margin: 0 0 1rem 0;
     }
     
     .desarrolladora {
-        font-size: 3vw;
-        margin-left: 0;
-        text-align: center;
+        font-size: 1.2rem;
+        margin: 0 0 2rem 0;
     }
     
     .frase {
-        font-size: 2.5vw;
-        width: 80vw;
-        margin-left: 10vw;
-        text-align: center;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 2rem auto;
+        line-height: 1.5;
     }
     
     .fotomia {
-        width: 40vw;
-        margin-left: 30vw;
-        margin-top: 5vw;
+        width: 200px;
+        height: 200px;
+        margin: 2rem auto;
+        display: block;
+        object-fit: cover;
     }
     
     .botton1, .botton2 {
-        width: 25vw;
-        height: 6vw;
-        font-size: 2.5vw;
-        margin-left: 5vw;
-        top: 2vw;
+        width: 140px;
+        height: 45px;
+        font-size: 1rem;
+        margin: 0.5rem;
+        display: inline-block;
+        border-radius: 5px;
     }
     
+    /* Sección perfil mejorada */
     .secciones__perfil {
+        padding: 3rem 1rem;
         height: auto;
-        padding: 5vw;
+        display: block;
     }
     
     #secciones__perfil--titulo {
-        font-size: 4vw;
-        margin-left: 0;
+        font-size: 2.5rem;
+        margin: 0 0 2rem 0;
         text-align: center;
     }
     
     .secciones__perfil--textoPerfil {
         width: 100%;
-        font-size: 2.5vw;
-        margin-left: 0;
+        font-size: 1.1rem;
+        margin: 0 0 2rem 0;
+        line-height: 1.6;
         text-align: justify;
-        margin-bottom: 5vw;
     }
     
     .secciones__perfil--Botones {
         width: 100%;
-        margin-left: 0;
-        grid-template-columns: 1fr;
-        gap: 2vw;
+        margin: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
     
     .botones {
-        width: 100%;
-        height: 6vw;
-        font-size: 2.5vw;
+        width: 120px;
+        height: 40px;
+        font-size: 0.9rem;
         margin: 0;
+        border-radius: 5px;
     }
     
     .foto {
-        width: 60vw;
-        height: 70vw;
-        margin-left: 20vw;
-        margin-top: 5vw;
+        width: 250px;
+        height: 300px;
+        margin: 2rem auto 0 auto;
+        display: block;
+        object-fit: cover;
     }
     
+    /* Títulos responsivos */
     #secciones__Habilidades--titulo,
     #secciones__Estudios--Titulo,
     #secciones__Proyectos--Titulo,
     #secciones__contacto--Titulo {
-        font-size: 5vw;
-        margin-left: 0;
+        font-size: 2.5rem;
+        margin: 3rem 0 2rem 0;
         text-align: center;
     }
     
+    /* Habilidades optimizadas */
     .secciones__Habilidades-Tecnicas,
     .secciones__Habilidades-Blandas {
         grid-template-columns: 1fr;
-        margin-top: 2vw;
+        gap: 2rem;
+        padding: 1rem;
+        margin-top: 2rem;
     }
     
     .tech-card {
-        margin: 2vw;
         height: auto;
-        min-height: 35vw;
-        padding: 4vw;
+        min-height: 200px;
+        padding: 2rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem auto;
     }
     
     .tech-name {
-        font-size: 3vw;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
     
     .tech-description {
-        font-size: 2.5vw;
+        font-size: 1rem;
+        line-height: 1.5;
     }
     
+    /* Certificaciones responsive */
     .certificaciones-modernas {
         grid-template-columns: 1fr;
-        padding: 2vw;
+        gap: 2rem;
+        padding: 1rem;
     }
     
     .cert-modern-card {
-        padding: 4vw;
+        padding: 2rem;
+        text-align: center;
     }
     
     .cert-icono img {
-        width: 8vw;
+        width: 50px;
+        height: 50px;
     }
     
     .cert-titulo {
-        font-size: 3vw;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
     }
     
     .cert-institucion {
-        font-size: 2.5vw;
+        font-size: 1rem;
     }
     
     .cert-anio {
-        font-size: 2vw;
+        font-size: 0.9rem;
     }
     
+    /* Proyectos responsive */
     .proyectos-grid {
         grid-template-columns: 1fr;
-        padding: 2vw;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .proyecto-card {
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .proyecto-card img {
-        height: 25vw;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
     }
     
     .proyecto-info {
-        padding: 3vw;
+        padding: 1.5rem;
     }
     
     .proyecto-info h3 {
-        font-size: 3vw;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
     
     .proyecto-info p {
-        font-size: 2.5vw;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
     }
     
     .tecnologias {
-        font-size: 2vw;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
     }
     
     .proyecto-boton {
-        font-size: 2.5vw;
-        padding: 2vw 3vw;
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        display: inline-block;
+        text-align: center;
     }
     
+    /* Contacto responsive */
     .contacto-container {
         grid-template-columns: 1fr;
-        padding: 2vw;
+        gap: 2rem;
+        padding: 1rem;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+    
+    .contacto-formulario, .contacto-info {
+        padding: 2rem;
     }
     
     .contacto-formulario h2, .contacto-info h2 {
-        font-size: 4vw;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
     }
     
     .contacto-subtitulo {
-        font-size: 2.5vw;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
     
     .form-row {
-        flex-direction: column;
-        gap: 0;
+        display: block;
     }
     
     .contacto-formulario input, .contacto-formulario textarea {
-        font-size: 2.5vw;
-        padding: 2vw;
+        font-size: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
     
     .contacto-formulario button {
-        font-size: 2.5vw;
-        padding: 2vw;
+        font-size: 1.1rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .info-box {
+        margin-bottom: 1.5rem;
+        align-items: center;
     }
     
     .info-box img {
-        width: 4vw;
+        width: 24px;
+        height: 24px;
     }
     
     .info-box strong {
-        font-size: 2.5vw;
+        font-size: 1.1rem;
     }
     
     .info-box p {
-        font-size: 2.5vw;
+        font-size: 1rem;
+        margin-top: 0.2rem;
+    }
+    
+    .redes-sociales {
+        justify-content: center;
+        margin-top: 2rem;
     }
     
     .redes-sociales img {
-        width: 5vw;
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Video responsive */
+    .video-presentacion {
+        padding: 2rem 1rem;
     }
     
     .video-titulo {
-        font-size: 5vw;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
     }
     
     .video-contenedor {
-        width: 95%;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    /* Footer responsive */
+    .footer-text {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+    
+    /* Modales responsive */
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+        padding: 2rem;
+        margin: 20% auto;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-content p,
+    .modal-content li {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }
 
 /* Móviles - 480px y menor */
 @media (max-width: 480px) {
     .header {
-        font-size: 4vw;
-        padding: 3vw;
+        padding: 1rem 0.5rem;
     }
     
     .logo {
-        width: 20vw;
-    }
-    
-    .img1, .img2, .img3, .img4, .img5 {
-        width: 8vw;
-    }
-    
-    .perfil, .habilidades, .certificaciones, .Proyectos, .Contacto {
-        font-size: 4vw;
+        width: 50px;
     }
     
     .hellow {
-        font-size: 8vw;
-        margin-top: 8vw;
+        font-size: 2rem;
     }
     
     .name {
-        font-size: 5vw;
+        font-size: 1.5rem;
     }
     
     .desarrolladora {
-        font-size: 4vw;
+        font-size: 1rem;
     }
     
     .frase {
-        font-size: 3.5vw;
-        width: 90vw;
-        margin-left: 5vw;
+        font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .fotomia {
-        width: 50vw;
-        margin-left: 25vw;
+        width: 180px;
+        height: 180px;
     }
     
     .botton1, .botton2 {
-        width: 35vw;
-        height: 8vw;
-        font-size: 3.5vw;
-        margin-left: 8vw;
+        width: 130px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .secciones__perfil {
+        padding: 2rem 1rem;
+    }
+    
+    #secciones__perfil--titulo,
+    #secciones__Habilidades--titulo,
+    #secciones__Estudios--Titulo,
+    #secciones__Proyectos--Titulo,
+    #secciones__contacto--Titulo {
+        font-size: 2rem;
     }
     
     .secciones__perfil--textoPerfil {
-        font-size: 3.5vw;
+        font-size: 1rem;
     }
     
     .botones {
-        height: 8vw;
-        font-size: 3.5vw;
+        width: 110px;
+        height: 35px;
+        font-size: 0.8rem;
     }
     
     .foto {
-        width: 70vw;
-        height: 80vw;
-        margin-left: 15vw;
+        width: 200px;
+        height: 240px;
     }
     
     .tech-card {
-        min-height: 45vw;
-        padding: 5vw;
+        padding: 1.5rem;
+        min-height: 180px;
+    }
+    
+    .tech-icon {
+        width: 60px;
+        height: 60px;
     }
     
     .tech-name {
-        font-size: 4vw;
+        font-size: 1.2rem;
     }
     
     .tech-description {
-        font-size: 3.5vw;
+        font-size: 0.9rem;
+    }
+    
+    .cert-modern-card {
+        padding: 1.5rem;
     }
     
     .cert-icono img {
-        width: 12vw;
+        width: 40px;
+        height: 40px;
     }
     
     .cert-titulo {
-        font-size: 4vw;
+        font-size: 1.1rem;
     }
     
     .cert-institucion {
-        font-size: 3.5vw;
+        font-size: 0.9rem;
     }
     
-    .cert-anio {
-        font-size: 3vw;
-    }
-    
-    .proyecto-card img {
-        height: 35vw;
+    .proyecto-info {
+        padding: 1rem;
     }
     
     .proyecto-info h3 {
-        font-size: 4vw;
+        font-size: 1.2rem;
     }
     
     .proyecto-info p {
-        font-size: 3.5vw;
-    }
-    
-    .tecnologias {
-        font-size: 3vw;
+        font-size: 0.9rem;
     }
     
     .proyecto-boton {
-        font-size: 3.5vw;
-        padding: 3vw 4vw;
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+    
+    .contacto-formulario, .contacto-info {
+        padding: 1.5rem;
     }
     
     .contacto-formulario h2, .contacto-info h2 {
-        font-size: 5vw;
-    }
-    
-    .contacto-subtitulo {
-        font-size: 3.5vw;
+        font-size: 1.7rem;
     }
     
     .contacto-formulario input, .contacto-formulario textarea {
-        font-size: 3.5vw;
-        padding: 3vw;
-    }
-    
-    .contacto-formulario button {
-        font-size: 3.5vw;
-        padding: 3vw;
+        font-size: 0.9rem;
+        padding: 0.8rem;
     }
     
     .info-box img {
-        width: 6vw;
-    }
-    
-    .info-box strong {
-        font-size: 3.5vw;
-    }
-    
-    .info-box p {
-        font-size: 3.5vw;
+        width: 20px;
+        height: 20px;
     }
     
     .redes-sociales img {
-        width: 7vw;
+        width: 30px;
+        height: 30px;
     }
     
     .video-titulo {
-        font-size: 6vw;
+        font-size: 2rem;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        margin: 30% auto;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-content p,
+    .modal-content li {
+        font-size: 0.9rem;
     }
 }
 
 /* Móviles muy pequeños - 320px y menor */
 @media (max-width: 320px) {
     .header {
-        font-size: 5vw;
-    }
-    
-    .logo {
-        width: 25vw;
+        padding: 0.8rem 0.3rem;
     }
     
     .hellow {
-        font-size: 10vw;
+        font-size: 1.8rem;
     }
     
     .name {
-        font-size: 6vw;
-    }
-    
-    .desarrolladora {
-        font-size: 5vw;
+        font-size: 1.3rem;
     }
     
     .frase {
-        font-size: 4vw;
+        font-size: 0.9rem;
     }
     
     .fotomia {
-        width: 60vw;
-        margin-left: 20vw;
+        width: 150px;
+        height: 150px;
     }
     
     .botton1, .botton2 {
-        width: 40vw;
-        height: 10vw;
-        font-size: 4vw;
-        margin-left: 5vw;
+        width: 120px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .secciones__perfil {
+        padding: 1.5rem 0.5rem;
     }
     
     .secciones__perfil--textoPerfil {
-        font-size: 4vw;
-    }
-    
-    .botones {
-        height: 10vw;
-        font-size: 4vw;
+        font-size: 0.9rem;
     }
     
     .foto {
-        width: 80vw;
-        height: 90vw;
-        margin-left: 10vw;
+        width: 180px;
+        height: 220px;
     }
     
     .tech-card {
-        min-height: 55vw;
+        padding: 1rem;
+        min-height: 160px;
     }
     
     .tech-name {
-        font-size: 5vw;
+        font-size: 1.1rem;
     }
     
     .tech-description {
-        font-size: 4vw;
+        font-size: 0.8rem;
     }
     
-    .cert-titulo {
-        font-size: 5vw;
-    }
-    
-    .cert-institucion {
-        font-size: 4vw;
-    }
-    
-    .proyecto-info h3 {
-        font-size: 5vw;
-    }
-    
-    .proyecto-info p {
-        font-size: 4vw;
+    .contacto-formulario, .contacto-info {
+        padding: 1rem;
     }
     
     .contacto-formulario h2, .contacto-info h2 {
-        font-size: 6vw;
-    }
-    
-    .contacto-subtitulo {
-        font-size: 4vw;
-    }
-    
-    .contacto-formulario input, .contacto-formulario textarea {
-        font-size: 4vw;
-    }
-    
-    .contacto-formulario button {
-        font-size: 4vw;
-    }
-    
-    .info-box strong {
-        font-size: 4vw;
-    }
-    
-    .info-box p {
-        font-size: 4vw;
-    }
-    
-    .redes-sociales img {
-        width: 8vw;
-    }
-    
-    .video-titulo {
-        font-size: 7vw;
+        font-size: 1.5rem;
     }
 }
 
-/* Ajustes adicionales para mejorar la experiencia móvil */
+/* Mejoras adicionales para mejor UX móvil */
 @media (max-width: 768px) {
-    /* Evitar scroll horizontal */
-    body {
-        overflow-x: hidden;
+    /* Mejorar el toque en móviles */
+    button, .botton1, .botton2, .botones, .proyecto-boton {
+        min-height: 44px;
+        cursor: pointer;
+        touch-action: manipulation;
     }
     
-    /* Mejorar el espaciado en móviles */
+    /* Mejorar los enlaces */
+    a {
+        touch-action: manipulation;
+    }
+    
+    /* Espaciado mejorado entre secciones */
     .secciones__perfil,
     .secciones__Estudios,
     .secciones__Proyectos,
-    .secciones__contacto {
-        margin-top: 8vw;
+    .secciones__contacto,
+    .video-presentacion {
+        margin-top: 2rem;
     }
     
-    /* Hacer los modales más pequeños en móviles */
-    .modal-content {
-        width: 90vw;
-        margin: 10vh auto;
-        padding: 5vw;
+    /* Scroll suave */
+    html {
+        scroll-behavior: smooth;
     }
     
-    .modal-content h3 {
-        font-size: 4vw;
-    }
-    
-    .modal-content p,
-    .modal-content li {
-        font-size: 3vw;
+    /* Mejorar la legibilidad */
+    p, li {
+        text-align: left;
+        hyphens: auto;
     }
 }
-
-
 
