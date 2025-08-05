@@ -114,7 +114,7 @@ body{
     margin-top: -20vw;
     width: 23vw;
     border-bottom: 0.1vw solid #52e88b;
-    box-shadow: 0 0 10px 1px #52e88b;
+    box-shadow: 0 0 20px rgba(82, 232, 139, 0.4);
     border-radius: 100%;
 }
 .botton1{
@@ -705,6 +705,631 @@ body{
   }
 }
 
+
+
+
+
+
+
+
+/* ========================================
+   MEDIA QUERIES - AGREGAR AL FINAL DEL CSS EXISTENTE
+   ======================================== */
+
+/* Tablets grandes - 1024px y menor */
+@media (max-width: 1024px) {
+    .header {
+        grid-template-columns: 1fr 1fr ;
+        font-size: 1.1vw;
+        height: 10vw;
+    }
+    
+    .logo {
+        width: 6vw;
+    }
+    
+    .img1, .img2, .img3, .img4 {
+        width: 3vw;
+        margin-left: 3vw;
+    }
+    
+    .img5 {
+        width: 2vw;
+        margin-left: 3vw;
+    }
+    
+    .hellow {
+        font-size: 3.5vw;
+        margin-left: 15vw;
+        margin-top: 10vw;
+    }
+    
+    .name {
+        font-size: 2vw;
+        margin-left: 15vw;
+    }
+    
+    .desarrolladora {
+        margin-left: 20vw;
+    }
+    
+    .frase {
+        margin-left: 15vw;
+        width: 35vw;
+    }
+    
+    .fotomia {
+        margin-left: 60vw;
+        width: 25vw;
+        margin-top: -18vw;
+    }
+    
+    .botton1 {
+        margin-left: 18vw;
+    }
+    
+    .secciones__Habilidades-Tecnicas,
+    .secciones__Habilidades-Blandas {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .certificaciones-modernas {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Tablets - 768px y menor */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 2vw;
+        text-align: center;
+    }
+    
+    .header div {
+        grid-template-columns: 1fr;
+        margin: 1vw 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 15vw;
+        margin: 0 auto;
+    }
+    
+    .img1, .img2, .img3, .img4, .img5 {
+        width: 6vw;
+        margin: 0 auto 1vw auto;
+    }
+    
+    .perfil, .habilidades, .certificaciones, .Proyectos, .Contacto {
+        margin: 0;
+        font-size: 3vw;
+    }
+    
+    .hellow {
+        font-size: 6vw;
+        margin-left: 0;
+        margin-top: 5vw;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 4vw;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .desarrolladora {
+        font-size: 3vw;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .frase {
+        font-size: 2.5vw;
+        width: 80vw;
+        margin-left: 10vw;
+        text-align: center;
+    }
+    
+    .fotomia {
+        width: 40vw;
+        margin-left: 30vw;
+        margin-top: 5vw;
+    }
+    
+    .botton1, .botton2 {
+        width: 25vw;
+        height: 6vw;
+        font-size: 2.5vw;
+        margin-left: 5vw;
+        top: 2vw;
+    }
+    
+    .secciones__perfil {
+        height: auto;
+        padding: 5vw;
+    }
+    
+    #secciones__perfil--titulo {
+        font-size: 4vw;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .secciones__perfil--textoPerfil {
+        width: 100%;
+        font-size: 2.5vw;
+        margin-left: 0;
+        text-align: justify;
+        margin-bottom: 5vw;
+    }
+    
+    .secciones__perfil--Botones {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        gap: 2vw;
+    }
+    
+    .botones {
+        width: 100%;
+        height: 6vw;
+        font-size: 2.5vw;
+        margin: 0;
+    }
+    
+    .foto {
+        width: 60vw;
+        height: 70vw;
+        margin-left: 20vw;
+        margin-top: 5vw;
+    }
+    
+    #secciones__Habilidades--titulo,
+    #secciones__Estudios--Titulo,
+    #secciones__Proyectos--Titulo,
+    #secciones__contacto--Titulo {
+        font-size: 5vw;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .secciones__Habilidades-Tecnicas,
+    .secciones__Habilidades-Blandas {
+        grid-template-columns: 1fr;
+        margin-top: 2vw;
+    }
+    
+    .tech-card {
+        margin: 2vw;
+        height: auto;
+        min-height: 35vw;
+        padding: 4vw;
+    }
+    
+    .tech-name {
+        font-size: 3vw;
+    }
+    
+    .tech-description {
+        font-size: 2.5vw;
+    }
+    
+    .certificaciones-modernas {
+        grid-template-columns: 1fr;
+        padding: 2vw;
+    }
+    
+    .cert-modern-card {
+        padding: 4vw;
+    }
+    
+    .cert-icono img {
+        width: 8vw;
+    }
+    
+    .cert-titulo {
+        font-size: 3vw;
+    }
+    
+    .cert-institucion {
+        font-size: 2.5vw;
+    }
+    
+    .cert-anio {
+        font-size: 2vw;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        padding: 2vw;
+    }
+    
+    .proyecto-card img {
+        height: 25vw;
+    }
+    
+    .proyecto-info {
+        padding: 3vw;
+    }
+    
+    .proyecto-info h3 {
+        font-size: 3vw;
+    }
+    
+    .proyecto-info p {
+        font-size: 2.5vw;
+    }
+    
+    .tecnologias {
+        font-size: 2vw;
+    }
+    
+    .proyecto-boton {
+        font-size: 2.5vw;
+        padding: 2vw 3vw;
+    }
+    
+    .contacto-container {
+        grid-template-columns: 1fr;
+        padding: 2vw;
+    }
+    
+    .contacto-formulario h2, .contacto-info h2 {
+        font-size: 4vw;
+    }
+    
+    .contacto-subtitulo {
+        font-size: 2.5vw;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contacto-formulario input, .contacto-formulario textarea {
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+    
+    .contacto-formulario button {
+        font-size: 2.5vw;
+        padding: 2vw;
+    }
+    
+    .info-box img {
+        width: 4vw;
+    }
+    
+    .info-box strong {
+        font-size: 2.5vw;
+    }
+    
+    .info-box p {
+        font-size: 2.5vw;
+    }
+    
+    .redes-sociales img {
+        width: 5vw;
+    }
+    
+    .video-titulo {
+        font-size: 5vw;
+    }
+    
+    .video-contenedor {
+        width: 95%;
+    }
+}
+
+/* Móviles - 480px y menor */
+@media (max-width: 480px) {
+    .header {
+        font-size: 4vw;
+        padding: 3vw;
+    }
+    
+    .logo {
+        width: 20vw;
+    }
+    
+    .img1, .img2, .img3, .img4, .img5 {
+        width: 8vw;
+    }
+    
+    .perfil, .habilidades, .certificaciones, .Proyectos, .Contacto {
+        font-size: 4vw;
+    }
+    
+    .hellow {
+        font-size: 8vw;
+        margin-top: 8vw;
+    }
+    
+    .name {
+        font-size: 5vw;
+    }
+    
+    .desarrolladora {
+        font-size: 4vw;
+    }
+    
+    .frase {
+        font-size: 3.5vw;
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    
+    .fotomia {
+        width: 50vw;
+        margin-left: 25vw;
+    }
+    
+    .botton1, .botton2 {
+        width: 35vw;
+        height: 8vw;
+        font-size: 3.5vw;
+        margin-left: 8vw;
+    }
+    
+    .secciones__perfil--textoPerfil {
+        font-size: 3.5vw;
+    }
+    
+    .botones {
+        height: 8vw;
+        font-size: 3.5vw;
+    }
+    
+    .foto {
+        width: 70vw;
+        height: 80vw;
+        margin-left: 15vw;
+    }
+    
+    .tech-card {
+        min-height: 45vw;
+        padding: 5vw;
+    }
+    
+    .tech-name {
+        font-size: 4vw;
+    }
+    
+    .tech-description {
+        font-size: 3.5vw;
+    }
+    
+    .cert-icono img {
+        width: 12vw;
+    }
+    
+    .cert-titulo {
+        font-size: 4vw;
+    }
+    
+    .cert-institucion {
+        font-size: 3.5vw;
+    }
+    
+    .cert-anio {
+        font-size: 3vw;
+    }
+    
+    .proyecto-card img {
+        height: 35vw;
+    }
+    
+    .proyecto-info h3 {
+        font-size: 4vw;
+    }
+    
+    .proyecto-info p {
+        font-size: 3.5vw;
+    }
+    
+    .tecnologias {
+        font-size: 3vw;
+    }
+    
+    .proyecto-boton {
+        font-size: 3.5vw;
+        padding: 3vw 4vw;
+    }
+    
+    .contacto-formulario h2, .contacto-info h2 {
+        font-size: 5vw;
+    }
+    
+    .contacto-subtitulo {
+        font-size: 3.5vw;
+    }
+    
+    .contacto-formulario input, .contacto-formulario textarea {
+        font-size: 3.5vw;
+        padding: 3vw;
+    }
+    
+    .contacto-formulario button {
+        font-size: 3.5vw;
+        padding: 3vw;
+    }
+    
+    .info-box img {
+        width: 6vw;
+    }
+    
+    .info-box strong {
+        font-size: 3.5vw;
+    }
+    
+    .info-box p {
+        font-size: 3.5vw;
+    }
+    
+    .redes-sociales img {
+        width: 7vw;
+    }
+    
+    .video-titulo {
+        font-size: 6vw;
+    }
+}
+
+/* Móviles muy pequeños - 320px y menor */
+@media (max-width: 320px) {
+    .header {
+        font-size: 5vw;
+    }
+    
+    .logo {
+        width: 25vw;
+    }
+    
+    .hellow {
+        font-size: 10vw;
+    }
+    
+    .name {
+        font-size: 6vw;
+    }
+    
+    .desarrolladora {
+        font-size: 5vw;
+    }
+    
+    .frase {
+        font-size: 4vw;
+    }
+    
+    .fotomia {
+        width: 60vw;
+        margin-left: 20vw;
+    }
+    
+    .botton1, .botton2 {
+        width: 40vw;
+        height: 10vw;
+        font-size: 4vw;
+        margin-left: 5vw;
+    }
+    
+    .secciones__perfil--textoPerfil {
+        font-size: 4vw;
+    }
+    
+    .botones {
+        height: 10vw;
+        font-size: 4vw;
+    }
+    
+    .foto {
+        width: 80vw;
+        height: 90vw;
+        margin-left: 10vw;
+    }
+    
+    .tech-card {
+        min-height: 55vw;
+    }
+    
+    .tech-name {
+        font-size: 5vw;
+    }
+    
+    .tech-description {
+        font-size: 4vw;
+    }
+    
+    .cert-titulo {
+        font-size: 5vw;
+    }
+    
+    .cert-institucion {
+        font-size: 4vw;
+    }
+    
+    .proyecto-info h3 {
+        font-size: 5vw;
+    }
+    
+    .proyecto-info p {
+        font-size: 4vw;
+    }
+    
+    .contacto-formulario h2, .contacto-info h2 {
+        font-size: 6vw;
+    }
+    
+    .contacto-subtitulo {
+        font-size: 4vw;
+    }
+    
+    .contacto-formulario input, .contacto-formulario textarea {
+        font-size: 4vw;
+    }
+    
+    .contacto-formulario button {
+        font-size: 4vw;
+    }
+    
+    .info-box strong {
+        font-size: 4vw;
+    }
+    
+    .info-box p {
+        font-size: 4vw;
+    }
+    
+    .redes-sociales img {
+        width: 8vw;
+    }
+    
+    .video-titulo {
+        font-size: 7vw;
+    }
+}
+
+/* Ajustes adicionales para mejorar la experiencia móvil */
+@media (max-width: 768px) {
+    /* Evitar scroll horizontal */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Mejorar el espaciado en móviles */
+    .secciones__perfil,
+    .secciones__Estudios,
+    .secciones__Proyectos,
+    .secciones__contacto {
+        margin-top: 8vw;
+    }
+    
+    /* Hacer los modales más pequeños en móviles */
+    .modal-content {
+        width: 90vw;
+        margin: 10vh auto;
+        padding: 5vw;
+    }
+    
+    .modal-content h3 {
+        font-size: 4vw;
+    }
+    
+    .modal-content p,
+    .modal-content li {
+        font-size: 3vw;
+    }
+}
 
 
 
