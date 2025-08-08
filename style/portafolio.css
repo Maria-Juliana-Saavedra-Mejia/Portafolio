@@ -249,7 +249,7 @@ body{
     cursor: pointer;
     overflow: hidden;
     margin: 1vw;
-    height: 20vw;
+    height: 23vw;
 }
 
 .tech-card::before {
